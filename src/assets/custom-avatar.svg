@@ -1,0 +1,230 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <style>
+      .bg-office { fill: #E0E5EC; }
+      .window-frame { fill: #A0A0A0; }
+      .window-glass { fill: #C0D0E0; opacity: 0.7; }
+      .desk { fill: #6D7B8D; } /* Darker grey/blue for desk */
+      .laptop-body { fill: #B0B0B0; }
+      .laptop-screen { fill: #D5E0F0; }
+      .notepad { fill: #FFFFFF; stroke: #D0D0D0; stroke-width: 1; }
+      .pen { fill: #333333; }
+      .mug { fill: #007ACC; } /* Corporate blue for mug */
+      .plant-pot { fill: #8B4513; } /* Brown */
+      .plant-leaves { fill: #2E8B57; } /* Sea green */
+      .certificate-frame { fill: #B8860B; } /* DarkGoldenRod */
+      .certificate-paper { fill: #FAFAD2; } /* LightGoldenRodYellow */
+
+      .skin { fill: #C6A688; } /* Neutral skin tone */
+      .hair { fill: #4A3B31; } /* Dark brown hair */
+      .blazer { fill: #001F3F; } /* Navy */
+      .shirt { fill: #FFFFFF; }
+      .tie { fill: #708090; } /* Slate gray - optional, comment out if not needed */
+      /* .necklace-chain { stroke: #C0C0C0; stroke-width: 1.5; fill: none; } */
+      /* .necklace-pendant { fill: #D0A0D0; } */
+
+
+      .eye-white { fill: #FFFFFF; }
+      .eye-iris { fill: #503018; } /* Brown iris */
+      .eye-pupil { fill: #000000; }
+      .eyebrow { fill: #4A3B31; } /* Same as hair */
+      .mouth-inner { fill: #8C434C; } /* Dark pink for inside mouth */
+      .teeth { fill: #F0F0F0; }
+      .tongue { fill: #D98776; }
+
+      /* Hide all mouth shapes by default, except one */
+      .mouth-shape { display: none; }
+      #mouth-neutral { display: block; } /* Default visible mouth */
+    </style>
+    <filter id="blur-effect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+    </filter>
+  </defs>
+
+  <!-- SCENE BACKGROUND -->
+  <g id="scene-background">
+    <rect class="bg-office" width="800" height="600" />
+    <!-- Blurred Window -->
+    <g transform="translate(550, 50)">
+      <rect class="window-frame" width="200" height="300" rx="5" />
+      <rect class="window-glass" x="10" y="10" width="180" height="280" filter="url(#blur-effect)" />
+      <line x1="10" y1="155" x2="190" y2="155" stroke="#A0A0A0" stroke-width="4" filter="url(#blur-effect)" />
+      <line x1="105" y1="10" x2="105" y2="290" stroke="#A0A0A0" stroke-width="4" filter="url(#blur-effect)" />
+    </g>
+    <!-- Potted Plant -->
+    <g id="potted-plant" transform="translate(50, 380)">
+      <rect class="plant-pot" y="70" width="80" height="50" rx="5" />
+      <ellipse class="plant-pot" cx="40" cy="70" rx="40" ry="10" />
+      <path class="plant-leaves" d="M40,70 Q30,40 20,50 Q10,60 25,75 Z" />
+      <path class="plant-leaves" d="M40,70 Q45,30 50,40 Q60,50 55,70 Z" />
+      <path class="plant-leaves" d="M40,70 Q50,45 60,55 Q70,65 50,78 Z" />
+      <path class="plant-leaves" d="M35,60 Q25,20 40,30 Q55,40 45,65 Z" />
+    </g>
+    <!-- Framed Certificate -->
+    <g id="framed-certificate" transform="translate(600, 100)">
+      <rect class="certificate-frame" width="120" height="160" rx="3"/>
+      <rect class="certificate-paper" x="10" y="10" width="100" height="140"/>
+      <text x="20" y="40" font-size="10" fill="#555">CERTIFICATE</text>
+      <line x1="20" y1="60" x2="100" y2="60" stroke="#999" stroke-width="0.5"/>
+      <line x1="20" y1="70" x2="100" y2="70" stroke="#999" stroke-width="0.5"/>
+      <line x1="20" y1="80" x2="80" y2="80" stroke="#999" stroke-width="0.5"/>
+    </g>
+  </g>
+
+  <!-- DESK AND ITEMS -->
+  <g id="desk-and-items">
+    <rect class="desk" y="450" width="800" height="150" />
+    <!-- Laptop -->
+    <g id="laptop" transform="translate(150, 350)">
+      <polygon class="laptop-body" points="0,100 200,100 190,110 10,110" />
+      <rect class="laptop-screen" x="10" y="0" width="180" height="100" rx="5" />
+      <rect fill="#333" x="15" y="5" width="170" height="90" /> <!-- Screen content area -->
+      <text fill="#FFF" x="25" y="25" font-size="10">Interview Notes</text>
+    </g>
+    <!-- Notepad and Pen -->
+    <g id="notepad-pen" transform="translate(450, 390)">
+      <rect class="notepad" width="120" height="150" rx="3"/>
+      <line x1="10" y1="20" x2="110" y2="20" stroke="#B0E0E6" stroke-width="1"/>
+      <line x1="10" y1="30" x2="110" y2="30" stroke="#B0E0E6" stroke-width="1"/>
+      <line x1="10" y1="40" x2="110" y2="40" stroke="#B0E0E6" stroke-width="1"/>
+      <rect class="pen" x="30" y="60" width="10" height="80" rx="2" transform="rotate(15 35 100)" />
+      <polygon class="pen" points="32,60 38,60 35,50" transform="rotate(15 35 100)" />
+    </g>
+    <!-- Coffee Mug -->
+    <g id="coffee-mug" transform="translate(650, 410)">
+      <rect class="mug" width="60" height="70" rx="5" />
+      <ellipse class="mug" cx="30" cy="5" rx="30" ry="5" />
+      <path class="mug" d="M60,15 Q75,20 75,35 Q75,50 60,55" stroke="#007ACC" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <ellipse fill="#54351A" cx="30" cy="5" rx="25" ry="3" /> <!-- Coffee -->
+    </g>
+  </g>
+
+  <!-- HR MANAGER -->
+  <g id="hr-manager" transform="translate(400, 280)"> <!-- Centered more or less, adjust as needed -->
+    <!-- Torso -->
+    <g id="torso-outfit">
+      <path class="blazer" d="M -70,50 Q -60,0 -20,0 L 20,0 Q 60,0 70,50 L 50,180 L -50,180 Z" />
+      <polygon class="shirt" points="-20,0 20,0 15,30 -15,30" /> <!-- Shirt collar part -->
+      <!-- Optional Tie -->
+      <polygon class="tie" points="0,5 10,30 0,55 -10,30" />
+      <!-- Optional Simple Necklace (Uncomment to use, comment out tie) -->
+      <!-- <circle class="necklace-chain" cx="0" cy="20" r="18" /> -->
+      <!-- <circle class="necklace-pendant" cx="0" cy="38" r="5" /> -->
+    </g>
+
+    <!-- Head -->
+    <g id="head" transform="translate(0, -50)">
+      <ellipse class="skin" cx="0" cy="-10" rx="50" ry="60" /> <!-- Head shape -->
+      <path class="hair" d="M -50,-10 Q -55,-70 0,-75 Q 55,-70 50,-10 Q 30,-20 0,-25 Q -30,-20 -50,-10 Z" /> <!-- Simple neat hair -->
+      <!-- Alternative tied-back hair:
+      <path class="hair" d="M 0,-75
+                           A 55 55 0 0 1 -50 -30
+                           L -50 0
+                           A 10 15 0 0 0 -30 15 L -20 15
+                           A 15 15 0 0 1 -20 45 L -10 45
+                           A 15 15 0 0 1 -10 15 L 0 15
+                           A 10 15 0 0 0 10 0 L 10 -30
+                           A 55 55 0 0 1 0 -75 Z" />
+      <ellipse class="hair" cx="0" cy="40" rx="15" ry="18" /> Bun -->
+
+
+      <!-- Neck -->
+      <rect class="skin" x="-15" y="40" width="30" height="30" />
+
+      <!-- Eyes -->
+      <g id="eyes" transform="translate(0, -20)">
+        <g id="left-eye" transform="translate(-20, 0)">
+          <ellipse class="eye-white" cx="0" cy="0" rx="10" ry="7"/>
+          <ellipse class="eye-iris" cx="0" cy="0" rx="5" ry="5"/>
+          <circle class="eye-pupil" cx="0" cy="0" r="2.5"/>
+          <circle fill="#FFF" cx="1" cy="-1" r="1" opacity="0.7"/> <!-- Highlight -->
+        </g>
+        <g id="right-eye" transform="translate(20, 0)">
+          <ellipse class="eye-white" cx="0" cy="0" rx="10" ry="7"/>
+          <ellipse class="eye-iris" cx="0" cy="0" rx="5" ry="5"/>
+          <circle class="eye-pupil" cx="0" cy="0" r="2.5"/>
+          <circle fill="#FFF" cx="1" cy="-1" r="1" opacity="0.7"/> <!-- Highlight -->
+        </g>
+      </g>
+
+      <!-- Eyebrows -->
+      <g id="eyebrows" transform="translate(0, -35)">
+        <path id="left-eyebrow" class="eyebrow" d="M -30,0 Q -20,-5 -10,0" stroke-width="3" stroke-linecap="round" fill="none" stroke="#4A3B31"/>
+        <path id="right-eyebrow" class="eyebrow" d="M 10,0 Q 20,-5 30,0" stroke-width="3" stroke-linecap="round" fill="none" stroke="#4A3B31"/>
+      </g>
+
+      <!-- Nose -->
+      <path id="nose" class="skin" d="M -5,10 Q 0,15 5,10 L 0,20 Z" stroke="#000" stroke-width="0.5" fill-opacity="0.5"/>
+
+      <!-- MOUTH SHAPES (Visemes) -->
+      <!-- IMPORTANT: Only one mouth-shape group should have display:block at a time -->
+      <g id="mouth-container" transform="translate(0, 25)">
+        <!-- Neutral / M, B, P (Closed) -->
+        <g id="mouth-neutral" class="mouth-shape">
+          <path d="M -15,0 Q 0,5 15,0" stroke="#333" stroke-width="1.5" fill="none" />
+        </g>
+
+        <!-- A (Ah as in father) -->
+        <g id="mouth-A" class="mouth-shape">
+          <ellipse class="mouth-inner" cx="0" cy="5" rx="12" ry="8"/>
+          <ellipse class="teeth" cx="0" cy="-1" rx="10" ry="3" /> <!-- Upper teeth slightly visible -->
+          <ellipse class="teeth" cx="0" cy="10" rx="9" ry="3" /> <!-- Lower teeth slightly visible -->
+        </g>
+
+        <!-- E (Ee as in meet) -->
+        <g id="mouth-E" class="mouth-shape">
+          <path class="mouth-inner" d="M -18,0 Q 0,-2 18,0 Q 0,6 -18,0 Z" />
+          <rect class="teeth" x="-15" y="-1" width="30" height="3" rx="1"/> <!-- Teeth visible -->
+        </g>
+
+        <!-- I (Ih as in sit) -->
+        <g id="mouth-I" class="mouth-shape">
+          <path class="mouth-inner" d="M -16,0 Q 0,-1 16,0 Q 0,5 -16,0 Z" />
+          <rect class="teeth" x="-13" y="0" width="26" height="2.5" rx="1"/>
+        </g>
+
+        <!-- O (Oh as in boat) -->
+        <g id="mouth-O" class="mouth-shape">
+          <ellipse class="mouth-inner" cx="0" cy="3" rx="8" ry="10"/>
+        </g>
+
+        <!-- U (Oo as in boot) -->
+        <g id="mouth-U" class="mouth-shape">
+          <ellipse class="mouth-inner" cx="0" cy="3" rx="5" ry="7"/>
+        </g>
+
+        <!-- L, N, D, T (Tongue visible) -->
+        <g id="mouth-L" class="mouth-shape">
+          <path class="mouth-inner" d="M -12,0 Q 0,5 12,0 L 10,5 Q 0,10 -10,5 Z" />
+          <path class="tongue" d="M -5,1 Q 0,-2 5,1 A 5 2 0 0 1 -5,1 Z" /> <!-- Tongue tip up -->
+        </g>
+
+        <!-- F, V (Teeth on lower lip) -->
+        <g id="mouth-F" class="mouth-shape">
+          <path d="M -12,5 Q 0,8 12,5" stroke="#333" stroke-width="1.5" fill="none" /> <!-- Lower lip line -->
+          <rect class="teeth" x="-8" y="-2" width="16" height="4" rx="1"/> <!-- Upper teeth over where lip would be -->
+        </g>
+
+        <!-- S, Z (Teeth close) -->
+        <g id="mouth-S" class="mouth-shape">
+             <path d="M -15,0 Q 0,2 15,0 L 14,2 Q 0,4 -14,2 Z" class="mouth-inner"/>
+             <rect class="teeth" x="-12" y="-0.5" width="24" height="1.5" />
+             <rect class="teeth" x="-11" y="1.5" width="22" height="1.5" />
+        </g>
+
+        <!-- Rest (Slight smile) -->
+        <g id="mouth-rest" class="mouth-shape">
+          <path d="M -15,0 Q 0,6 15,0" stroke="#333" stroke-width="1.5" fill="none" />
+        </g>
+
+         <!-- TH (Tongue between teeth) -->
+        <g id="mouth-TH" class="mouth-shape">
+            <path d="M -14,0 Q 0,3 14,0 L 12,4 Q 0,7 -12,4 Z" class="mouth-inner"/>
+            <rect class="teeth" x="-10" y="-1" width="20" height="2.5" />
+            <path class="tongue" d="M -7,1.5 Q 0,2.5 7,1.5 L 6,3.5 Q 0,4.5 -6,3.5 Z" />
+            <rect class="teeth" x="-10" y="3" width="20" height="2.5" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

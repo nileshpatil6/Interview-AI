@@ -1,0 +1,307 @@
+:root {
+  /* Primary Theme Colors */
+  --primary-orange: #FF6B00;
+  --primary-orange-light: #FF8C38;
+  --primary-orange-dark: #E05A00;
+
+  /* White Shades */
+  --white: #FFFFFF;
+  --white-off: #FFF8F3;
+  --white-muted: #F5F5F5;
+
+  /* Text Colors */
+  --text-dark: #333333;
+  --text-medium: #555555;
+  --text-light: #777777;
+
+  /* Background Colors */
+  --bg-dark: #222222;
+  --bg-medium: #333333;
+  --bg-light: #444444;
+
+  /* Utility Colors */
+  --success: #4CAF50;
+  --warning: #FFC107;
+  --error: #F44336;
+
+  /* Font */
+  --font-family: "Space Mono", monospace;
+
+  /* Legacy Variables (kept for compatibility) */
+  --text: var(--white);
+  --gray-200: #b4b8bb;
+  --gray-300: #80868b;
+  --gray-500: #5f6368;
+  --gray-600: #444444;
+  --gray-700: #202020;
+  --gray-800: #171717;
+  --gray-900: #111111;
+  --gray-1000: #0a0a0a;
+  --border-stroke: #444444;
+
+  --Neutral-00: #000;
+  --Neutral-5: #181a1b;
+  --Neutral-10: #1c1f21;
+  --Neutral-15: #232729;
+  --Neutral-20: #2a2f31;
+  --Neutral-30: #404547;
+  --Neutral-50: #707577;
+  --Neutral-60: #888d8f;
+  --Neutral-80: #c3c6c7;
+  --Neutral-90: #e1e2e3;
+
+  --accent-red: var(--primary-orange);
+  --background: var(--bg-dark);
+  --color: var(--text);
+
+  scrollbar-color: var(--primary-orange-light) var(--bg-dark);
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--white);
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+}
+
+.material-symbols-outlined {
+  &.filled {
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Font utility classes */
+.space-mono-regular {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* App Styles */
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Interview App Styles */
+.interview-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+.interview-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.interview-header {
+  background-color: var(--primary-orange);
+  color: var(--white);
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  /* Model text display in header */
+  .model-text-display {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: white;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.interview-content {
+  flex: 1;
+  position: relative;
+  background-color: var(--white-off);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Corner webcams */
+.corner-webcam {
+  position: absolute;
+  width: 240px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background-color: var(--white-muted);
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  z-index: 5;
+
+  .video-feed-label {
+    font-size: 0.8em;
+    color: var(--text-medium);
+    text-align: center;
+    padding: 3px 0;
+    font-weight: bold;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+  }
+}
+
+.corner-webcam-left {
+  top: 20px;
+  left: 20px;
+  
+  .face-detection, 
+  .face-detection-canvas {
+    width: 100% !important;
+    height: calc(100% - 26px) !important;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.corner-webcam-right {
+  top: 20px;
+  right: 20px;
+  
+  .user-video {
+    width: 100%;
+    height: calc(100% - 26px);
+    object-fit: cover;
+    border-radius: 4px;
+    border: none;
+  }
+}
+
+/* Main content layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.central-avatar-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.questions-section {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 80px; /* Leave room for controls at bottom */
+}
+
+.interview-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid var(--gray-300);
+}
+
+.blur-background {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .corner-webcam {
+    width: 200px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .corner-webcam {
+    width: 160px;
+    height: 130px;
+  }
+  
+  .central-avatar-section {
+    transform: scale(0.9);
+  }
+  
+  .interview-header h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .corner-webcam-left {
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    height: 100px;
+  }
+  
+  .corner-webcam-right {
+    top: 10px;
+    right: 10px;
+    width: 120px;
+    height: 100px;
+  }
+  
+  .central-avatar-section {
+    transform: scale(0.8);
+  }
+}
+
+/* Make sure the interview avatar is centered and properly sized */
+.interview-avatar-container {
+  width: 100%;
+  max-width: 400px;
+}

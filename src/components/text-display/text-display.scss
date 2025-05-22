@@ -1,0 +1,36 @@
+.text-display {
+  position: fixed;
+  top: 100px; /* Changed from bottom to top */
+  left: 0;
+  right: 0;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 107, 0, 0.9); /* Changed to orange background */
+  border: 5px solid black; /* Changed to black border for contrast */
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Increased shadow */
+  z-index: 9999; /* Increased z-index */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text-content {
+    p {
+      margin: 0;
+      font-size: 22px; /* Increased font size */
+      line-height: 1.5;
+      color: white; /* Changed to white text for contrast with orange background */
+      text-align: center;
+      font-family: var(--font-family);
+      font-weight: 700; /* Increased font weight */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added text shadow */
+    }
+  }
+}

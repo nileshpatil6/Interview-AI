@@ -1,0 +1,246 @@
+<svg viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Refined HR Professional with Improved Styling -->
+  <defs>
+    <!-- Enhanced gradients -->
+    <linearGradient id="skinGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFDFC4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F5CBA7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFDFC4;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="suitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A2942;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2C3E50;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="shirtGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5F5F5;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="hairGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3A1F0D;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#4E2404;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#5E2C04;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6E3C14;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="hairHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6E3C14;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8C5A32;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="tieGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0392B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E74C3C;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Enhanced shadow -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+      <feOffset dx="3" dy="3" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- Suit texture pattern -->
+    <pattern id="suitPattern" patternUnits="userSpaceOnUse" width="10" height="10">
+      <rect width="10" height="10" fill="url(#suitGradient)"/>
+      <path d="M0,0 L10,10 M10,0 L0,10" stroke="#1A2942" stroke-width="0.5" stroke-opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="600" height="700" fill="none" />
+  
+  <!-- Updated torso with better proportions -->
+  <path d="M190,330 L190,600 C190,650 410,650 410,600 L410,330 Z" 
+        fill="url(#suitPattern)" filter="url(#dropShadow)" />
+  
+  <!-- Improved shirt with modern collar -->
+  <path d="M215,330 L215,550 C215,590 385,590 385,550 L385,330 Z" 
+        fill="url(#shirtGradient)" stroke="#EEEEEE" stroke-width="1" />
+  
+  <!-- Modern suit lapels -->
+  <path d="M190,330 L225,330 L240,380 L300,330 L360,380 L375,330 L410,330 
+           C410,330 380,410 300,410 C220,410 190,330 190,330 Z" 
+        fill="url(#suitPattern)" />
+  
+  <!-- Enhanced modern collar -->
+  <path d="M225,330 L235,315 L300,330 L365,315 L375,330" 
+        fill="none" stroke="#FFFFFF" stroke-width="5" />
+  
+  <!-- Extended tie design -->
+  <path d="M300,330 L288,380 L300,520 L312,380 Z" fill="url(#tieGradient)" />
+  <path d="M288,330 C288,330 300,337 312,330 L309,345 L291,345 Z" fill="#C0392B" />
+  
+  <!-- Left arm/shoulder improved -->
+  <path d="M190,330 C190,330 150,360 130,430 C110,500 130,550 150,570"
+        fill="url(#suitPattern)" />
+  
+  <!-- Right arm/shoulder improved -->
+  <path d="M410,330 C410,330 450,360 470,430 C490,500 470,550 450,570"
+        fill="url(#suitPattern)" />
+  
+  <!-- Improved left hand with better finger definition -->
+  <path d="M150,570 C145,590 155,615 170,620 C185,625 190,615 195,610 
+           C198,607 205,607 205,607 C205,607 210,618 218,618 
+           C226,618 230,610 230,605 C230,602 235,607 235,607 
+           C235,607 238,618 245,618 C252,618 258,605 252,595 
+           C246,585 235,570 215,565 C195,560 155,550 150,570 Z"
+        fill="url(#skinGradient)" stroke="#E5B89E" stroke-width="1" />
+  <path d="M180,613 L187,603" stroke="#E5B89E" stroke-width="1" opacity="0.7" />
+  <path d="M220,613 L213,603" stroke="#E5B89E" stroke-width="1" opacity="0.7" />
+  <path d="M238,613 L233,603" stroke="#E5B89E" stroke-width="1" opacity="0.7" />
+  <path d="M195,607 L195,590" stroke="#E5B89E" stroke-width="1.5" opacity="0.7" fill="none" />
+  <path d="M210,607 L210,592" stroke="#E5B89E" stroke-width="1.5" opacity="0.7" fill="none" />
+  <path d="M230,607 L230,595" stroke="#E5B89E" stroke-width="1.5" opacity="0.7" fill="none" />
+  
+  <!-- Improved right hand with better finger definition -->
+  <path d="M450,570 C455,590 445,615 430,620 C415,625 410,615 405,610 
+           C402,607 395,607 395,607 C395,607 390,618 382,618 
+           C374,618 370,610 370,605 C370,602 365,607 365,607 
+           C365,607 362,618 355,618 C348,618 342,605 348,595 
+           C354,585 365,570 385,565 C405,560 445,550 450,570 Z"
+        fill="url(#skinGradient)" stroke="#E5B89E" stroke-width="1" />
+  <path d="M420,613 L413,603" stroke="#E5B89E" stroke-width="1" opacity="0.7" />
+  <path d="M380,613 L387,603" stroke="#E5B89E" stroke-width="1" opacity="0.7" />
+  <path d="M362,613 L367,603" stroke="#E5B89E" stroke-width="1" opacity="0.7" />
+  <path d="M405,607 L405,590" stroke="#E5B89E" stroke-width="1.5" opacity="0.7" fill="none" />
+  <path d="M390,607 L390,592" stroke="#E5B89E" stroke-width="1.5" opacity="0.7" fill="none" />
+  <path d="M370,607 L370,595" stroke="#E5B89E" stroke-width="1.5" opacity="0.7" fill="none" />
+  
+  <!-- Modern neck structure -->
+  <path d="M265,290 C265,290 260,320 300,320 C340,320 335,290 335,290 L335,330 C335,350 265,350 265,330 Z" 
+        fill="url(#skinGradient)" />
+  
+  <!-- Contemporary head shape -->
+  <ellipse cx="300" cy="220" rx="85" ry="100" fill="url(#skinGradient)" filter="url(#dropShadow)" />
+  
+  <!-- Improved modern hairstyle with texture and dimension -->
+  <path d="M300,120 
+           C220,120 215,160 215,210
+           C215,240 225,260 245,280
+           L247,245
+           C225,235 230,180 265,170
+           C305,160 325,170 340,190
+           C355,210 350,235 348,245
+           L350,280
+           C370,260 385,240 385,210
+           C385,160 380,120 300,120
+           Z" 
+        fill="url(#hairGradient)" />
+        
+  <!-- Hair highlights for dimension -->
+  <path d="M250,160 C270,145 320,145 350,160 L345,170 C310,155 290,155 255,170 Z" 
+        fill="url(#hairHighlight)" opacity="0.6" />
+        
+  <path d="M230,200 C215,220 215,240 225,260"
+        fill="none" stroke="url(#hairHighlight)" stroke-width="8" opacity="0.6" />
+        
+  <path d="M370,200 C385,220 385,240 375,260"
+        fill="none" stroke="url(#hairHighlight)" stroke-width="8" opacity="0.6" />
+        
+  <!-- Improved styled bangs -->
+  <path d="M240,140 C255,125 280,120 310,120 C340,120 360,130 370,150
+         C360,145 355,140 345,140 C335,140 335,150 330,155
+         C320,150 310,145 295,145 C280,145 270,150 260,155
+         C255,150 255,145 245,145 C235,145 235,150 240,140 Z" 
+        fill="url(#hairGradient)" />
+        
+  <!-- Hair texture strands -->
+  <path d="M290,150 L293,170" stroke="url(#hairHighlight)" stroke-width="2" opacity="0.6" />
+  <path d="M310,150 L307,170" stroke="url(#hairHighlight)" stroke-width="2" opacity="0.6" />
+  <path d="M330,155 L325,175" stroke="url(#hairHighlight)" stroke-width="2" opacity="0.6" />
+  <path d="M270,155 L275,175" stroke="url(#hairHighlight)" stroke-width="2" opacity="0.6" />
+  
+  <!-- Hair side details with texture -->
+  <path d="M215,200 Q205,220 215,250" fill="url(#hairGradient)" />
+  <path d="M385,200 Q395,220 385,250" fill="url(#hairGradient)" />
+  
+  <!-- Modern face highlights -->
+  <ellipse cx="260" cy="240" rx="30" ry="25" fill="#FFDFC4" opacity="0.2" />
+  <ellipse cx="340" cy="240" rx="30" ry="25" fill="#FFDFC4" opacity="0.2" />
+  
+  <!-- Contemporary eyes with details -->
+  <ellipse cx="270" cy="210" rx="18" ry="15" fill="white" stroke="#BDC3C7" stroke-width="1" />
+  <ellipse cx="330" cy="210" rx="18" ry="15" fill="white" stroke="#BDC3C7" stroke-width="1" />
+  
+  <!-- Modern iris and pupils -->
+  <circle cx="270" cy="210" r="9" fill="#3498DB" />
+  <circle cx="330" cy="210" r="9" fill="#3498DB" />
+  <circle cx="270" cy="210" r="4.5" fill="#2C3E50" />
+  <circle cx="330" cy="210" r="4.5" fill="#2C3E50" />
+  
+  <!-- Contemporary eye highlights -->
+  <circle cx="273" cy="207" r="3.5" fill="white" />
+  <circle cx="333" cy="207" r="3.5" fill="white" />
+  <circle cx="267" cy="213" r="2" fill="white" opacity="0.7" />
+  <circle cx="327" cy="213" r="2" fill="white" opacity="0.7" />
+  
+  <!-- Modern eyebrows -->
+  <path d="M250,180 Q270,170 290,180" fill="none" stroke="#3A1F0D" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M310,180 Q330,170 350,180" fill="none" stroke="#3A1F0D" stroke-width="3.5" stroke-linecap="round" />
+  
+  <!-- Contemporary nose -->
+  <path d="M295,210 L300,220 Q307,240 300,250 L295,252 Q290,250 292,235 Z" fill="#E5B89E" />
+  <path d="M300,220 Q307,235 300,250" fill="none" stroke="#E5B89E" stroke-width="1" />
+  
+  <!-- Enhanced lip-sync with multiple mouth states -->
+  <!-- Mouth Closed - default state -->
+  <g id="mouth-closed">
+    <path d="M275,265 Q300,275 325,265" fill="none" stroke="#D64541" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M280,265 Q300,260 320,265" fill="none" stroke="#D64541" stroke-width="1.5" opacity="0.8" />
+  </g>
+  
+  <!-- Mouth Slightly Open -->
+  <g id="mouth-slightly-open" style="display:none">
+    <path d="M275,265 Q300,278 325,265" fill="none" stroke="#D64541" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M280,265 Q300,260 320,265" fill="none" stroke="#D64541" stroke-width="1.5" opacity="0.8" />
+    <path d="M290,270 Q300,275 310,270" fill="#701010" stroke="#701010" stroke-width="1" opacity="0.7" />
+  </g>
+  
+  <!-- Mouth Medium Open -->
+  <g id="mouth-medium-open" style="display:none">
+    <path d="M275,263 Q300,283 325,263" fill="none" stroke="#D64541" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M280,263 Q300,258 320,263" fill="none" stroke="#D64541" stroke-width="1.5" opacity="0.8" />
+    <path d="M285,270 L315,270" fill="none" stroke="#701010" stroke-width="1" />
+    <ellipse cx="300" cy="275" rx="15" ry="7" fill="#701010" opacity="0.8" />
+  </g>
+  
+  <!-- Mouth Wide Open -->
+  <g id="mouth-open" style="display:none">
+    <path d="M275,261 Q300,291 325,261" fill="none" stroke="#D64541" stroke-width="2.8" stroke-linecap="round" />
+    <path d="M280,261 Q300,256 320,261" fill="none" stroke="#D64541" stroke-width="1.8" opacity="0.8" />
+    <ellipse cx="300" cy="277" rx="20" ry="12" fill="#701010" opacity="0.9" />
+    <path d="M290,283 Q300,288 310,283" fill="#450A0A" stroke="#450A0A" stroke-width="1" opacity="0.8" />
+  </g>
+  
+  <!-- Smile -->
+  <g id="mouth-smile" style="display:none">
+    <path d="M275,265 Q300,285 325,265" fill="none" stroke="#D64541" stroke-width="2.8" stroke-linecap="round" />
+    <path d="M280,265 Q300,272 320,265" fill="none" stroke="#D64541" stroke-width="1.5" opacity="0.8" />
+  </g>
+  
+  <!-- Contemporary facial definition -->
+  <path d="M255,235 Q260,260 265,285" fill="none" stroke="#E5B89E" stroke-width="1.5" opacity="0.5" />
+  <path d="M345,235 Q340,260 335,285" fill="none" stroke="#E5B89E" stroke-width="1.5" opacity="0.5" />
+  <path d="M285,290 Q300,300 315,290" fill="none" stroke="#E5B89E" stroke-width="1.5" opacity="0.5" />
+  
+  <!-- Modern jaw definition -->
+  <path d="M230,240 C230,280 370,280 370,240" fill="none" stroke="#E5B89E" stroke-width="1" opacity="0.5" />
+  
+  <!-- Modern ears -->
+  <path d="M215,210 C205,200 205,220 208,230 C210,240 215,245 220,240 
+           C225,235 225,225 223,220 Z" fill="url(#skinGradient)" />
+  <path d="M215,210 C210,215 210,225 215,230" fill="none" stroke="#E5B89E" stroke-width="1" />
+  
+  <path d="M385,210 C395,200 395,220 392,230 C390,240 385,245 380,240 
+           C375,235 375,225 377,220 Z" fill="url(#skinGradient)" />
+  <path d="M385,210 C390,215 390,225 385,230" fill="none" stroke="#E5B89E" stroke-width="1" />
+</svg>

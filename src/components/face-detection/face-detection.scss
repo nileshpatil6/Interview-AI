@@ -1,0 +1,105 @@
+.face-detection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .face-detection-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    background-color: #000;
+  }
+  
+  /* Style for face detection boxes */
+  .face-box {
+    position: absolute;
+    border: 3px solid #00ff00;
+    background-color: rgba(0, 255, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+
+  /* Status indicator shared styles */
+  .face-detection-status, .face-detection-warning {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 7px 12px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    backdrop-filter: blur(5px);
+    
+    .material-symbols-outlined {
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.8rem;
+    }
+  }
+
+  /* Face detected status (green) */
+  .face-detected-status {
+    background-color: rgba(0, 150, 0, 0.8);
+    border: 1px solid rgba(0, 255, 0, 0.8);
+    animation: pulse 2s infinite;
+  }
+
+  /* Warning status (red) */ 
+  .face-detection-warning {
+    background-color: rgba(255, 0, 0, 0.8);
+    border: 1px solid rgba(255, 100, 100, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: blink 1s infinite;
+  }
+  
+  /* Border effect when face is detected */
+  &.face-detected {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 3px solid rgba(0, 255, 0, 0.8);
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+      pointer-events: none;
+    }
+  }
+  
+  /* Animation for status indicators */
+  @keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+  }
+}

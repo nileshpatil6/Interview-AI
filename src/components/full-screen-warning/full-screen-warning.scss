@@ -1,0 +1,127 @@
+.full-screen-warning-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; // Highest z-index to ensure visibility
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in;
+  pointer-events: auto; // Make sure it captures mouse events
+}
+
+.full-screen-warning-content {
+  background-color: rgba(54, 54, 54, 0.95);
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  max-width: 600px;
+  border: 3px solid var(--primary-orange);
+  animation: scaleIn 0.4s ease-out, pulse 2s infinite alternate;
+  transform-origin: center;
+
+  .warning-icon {
+    font-size: 80px;
+    color: var(--primary-orange); // Match the theme color
+    margin-bottom: 20px;
+    display: block;
+    animation: pulse 1.5s infinite alternate;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--primary-orange);
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .instruction {
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--white);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
+  }
+  
+  strong {
+    color: var(--primary-orange);
+    font-weight: bold;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { 
+    transform: scale(0.9); 
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1); 
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .full-screen-warning-content {
+    padding: 25px 30px;
+    max-width: 400px;
+    
+    .warning-icon {
+      font-size: 50px;
+    }
+    
+    h1 {
+      font-size: 2em;
+    }
+    
+    p {
+      font-size: 1.1em;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .full-screen-warning-content {
+    padding: 20px;
+    max-width: 300px;
+    
+    .warning-icon {
+      font-size: 40px;
+    }
+    
+    h1 {
+      font-size: 1.8em;
+    }
+    
+    p {
+      font-size: 0.9em;
+    }
+  }
+}
